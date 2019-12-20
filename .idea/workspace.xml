@@ -178,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576858097506</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Collision added (Player and enemy)">
+      <created>1576859140336</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1576859140336</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -195,33 +202,34 @@
     <MESSAGE value="Health bar completed." />
     <MESSAGE value="Sound effects added (bg music, hit sound, bullet sound)" />
     <MESSAGE value="music files added to repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="music files added to repo" />
+    <MESSAGE value="Collision added (Player and enemy)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Collision added (Player and enemy)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="376" y="201" width="604" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576857761935">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="376" y="201" width="604" height="390" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1366.741@0.27.1366.741" timestamp="1576857761935" />
-    <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2" timestamp="1576858097337">
+    <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2" timestamp="1576859140099">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1576858097337" />
-    <state width="616" height="223" key="GridCell.Tab.0.bottom" timestamp="1576859090277">
+    <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1576859140099" />
+    <state width="616" height="223" key="GridCell.Tab.0.bottom" timestamp="1576859616584">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="616" height="223" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1576859090277" />
-    <state width="616" height="223" key="GridCell.Tab.0.center" timestamp="1576859090276">
+    <state width="616" height="223" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1576859616584" />
+    <state width="616" height="223" key="GridCell.Tab.0.center" timestamp="1576859616583">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="616" height="223" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1576859090276" />
-    <state width="616" height="223" key="GridCell.Tab.0.left" timestamp="1576859090275">
+    <state width="616" height="223" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1576859616583" />
+    <state width="616" height="223" key="GridCell.Tab.0.left" timestamp="1576859616582">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="616" height="223" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1576859090275" />
-    <state width="616" height="223" key="GridCell.Tab.0.right" timestamp="1576859090276">
+    <state width="616" height="223" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1576859616582" />
+    <state width="616" height="223" key="GridCell.Tab.0.right" timestamp="1576859616584">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="616" height="223" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1576859090276" />
+    <state width="616" height="223" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1576859616584" />
     <state width="1343" height="219" key="GridCell.Tab.1.bottom" timestamp="1576831458049">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
