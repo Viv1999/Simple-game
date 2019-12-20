@@ -150,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576855117118</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Enemy death added. Health bar initiated">
+      <created>1576855754735</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576855754735</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -163,29 +170,30 @@
     <MESSAGE value="bullets disappear after hit" />
     <MESSAGE value="multiple bullets glitch fixed" />
     <MESSAGE value="Player scores added .Score added to top-right corner." />
-    <option name="LAST_COMMIT_MESSAGE" value="Player scores added .Score added to top-right corner." />
+    <MESSAGE value="Enemy death added. Health bar initiated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enemy death added. Health bar initiated" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2" timestamp="1576855115173">
+    <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2" timestamp="1576855754470">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1576855115173" />
-    <state width="611" height="54" key="GridCell.Tab.0.bottom" timestamp="1576855687587">
+    <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1576855754470" />
+    <state width="611" height="54" key="GridCell.Tab.0.bottom" timestamp="1576857089895">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="611" height="54" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1576855687587" />
-    <state width="611" height="54" key="GridCell.Tab.0.center" timestamp="1576855687587">
+    <state width="611" height="54" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1576857089895" />
+    <state width="611" height="54" key="GridCell.Tab.0.center" timestamp="1576857089893">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="611" height="54" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1576855687587" />
-    <state width="611" height="54" key="GridCell.Tab.0.left" timestamp="1576855687586">
+    <state width="611" height="54" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1576857089893" />
+    <state width="611" height="54" key="GridCell.Tab.0.left" timestamp="1576857089892">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="611" height="54" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1576855687586" />
-    <state width="611" height="54" key="GridCell.Tab.0.right" timestamp="1576855687587">
+    <state width="611" height="54" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1576857089892" />
+    <state width="611" height="54" key="GridCell.Tab.0.right" timestamp="1576857089894">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="611" height="54" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1576855687587" />
+    <state width="611" height="54" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1576857089894" />
     <state width="1343" height="219" key="GridCell.Tab.1.bottom" timestamp="1576831458049">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
