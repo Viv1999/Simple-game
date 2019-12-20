@@ -25,6 +25,7 @@ class Player(object):
         self.walk_count = 0
         self.jump_count = 10
         self.standing = True
+        self.hitbox = (self.x + 17, self.y + 11, 29, 52)
 
     def draw(self, win):
         win.blit(bg, (0, 0))
@@ -46,6 +47,8 @@ class Player(object):
             else:
                 win.blit(walkLeft[0], (self.x, self.y))
             self.walk_count = 0
+        self.hitbox = (self.x + 17, self.y + 11, 29, 52)
+        pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
 
 
 class Projectile(object):
@@ -56,6 +59,7 @@ class Projectile(object):
         self.color = color
         self.facing = facing
         self.vel = 8 * facing
+        self.hitbox = (self.x + 20, self.y, 28, 60)
 
     def draw(self, win):
         pygame.draw.circle(win, self.color, (self.x, self.y), self.radius)
@@ -80,6 +84,7 @@ class Enemy(object):
         self.path = [self.x, self.end]
         self.walk_count = 0
         self.vel = 3
+        self.hitbox = (self.x + 17, self.y + 2, 31, 57)
 
     def draw(self, win):
         self.move()
@@ -92,6 +97,8 @@ class Enemy(object):
         else:
             win.blit(self.walkLeft[self.walk_count // 3], (self.x, self.y))
             self.walk_count += 1
+        self.hitbox = (self.x + 17, self.y + 2, 31, 57)
+        pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
 
     def move(self):
         if self.vel > 0:
