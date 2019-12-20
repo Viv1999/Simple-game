@@ -27,6 +27,8 @@ class Player(object):
         self.standing = True
         self.hitbox = (self.x + 17, self.y + 11, 29, 52)
 
+        self.score = 0
+
     def draw(self, win):
         win.blit(bg, (0, 0))
 
@@ -52,7 +54,7 @@ class Player(object):
 
 
 class Projectile(object):
-    def __init__(self, x, y, radius, color, facing):
+    def __init__(self, x, y, radius, color, facing, player):
         self.x = x
         self.y = y
         self.radius = radius
@@ -60,6 +62,7 @@ class Projectile(object):
         self.facing = facing
         self.vel = 8 * facing
         self.hitbox = (self.x + 20, self.y, 28, 60)
+        self.player = player
 
     def draw(self, win):
         pygame.draw.circle(win, self.color, (self.x, self.y), self.radius)
@@ -114,9 +117,9 @@ class Enemy(object):
                 self.vel *= -1
                 self.walk_count = 0
 
-    def hit(self):
+    def hit(self, player):
         print('hit')
-        pass
+        player.score += 1
 
 
 walkRight = [pygame.image.load('R1.png'), pygame.image.load('R2.png'), pygame.image.load('R3.png'), pygame.image.load('R4.png'), pygame.image.load('R5.png'), pygame.image.load('R6.png'), pygame.image.load('R7.png'), pygame.image.load('R8.png'), pygame.image.load('R9.png')]
@@ -128,11 +131,14 @@ char = pygame.image.load('standing.png')
 def redraw_game_window():
     man.draw(win)
     goblin.draw(win)
+    text = font.render('Score: ' + str(man.score), 1, (0, 0, 0))
+    win.blit(text, (390, 10))
     for bullet in bullets:
         bullet.draw(win)
     pygame.display.update()
 
 
+font = pygame.font.SysFont('comicsans', 30, True)
 man = Player(300, 410, 64, 64)
 goblin = Enemy(100, 410, 64, 64, 450)
 bullets = []
@@ -153,7 +159,7 @@ while run:
     for bullet in bullets:
         if bullet.y - bullet.radius < goblin.hitbox[1] + goblin.hitbox[3] and bullet.y + bullet.radius > goblin.hitbox[1]:
             if bullet.x + bullet.radius > goblin.hitbox[0] and bullet.x - bullet.radius < goblin.hitbox[0] + goblin.hitbox[2]:
-                goblin.hit()
+                goblin.hit(bullet.player)
                 bullets.pop(bullets.index(bullet))
 
         if 500 > bullet.x > 0:
@@ -169,7 +175,7 @@ while run:
         else:
             facing = 1
         if len(bullets) < 5:
-            bullets.append(Projectile(man.x + man.width//2, round(man.y + man.height//2), 6, (0, 0, 0), facing))
+            bullets.append(Projectile(man.x + man.width//2, round(man.y + man.height//2), 6, (0, 0, 0), facing, man))
         shoot_loop = 1
 
     if keys[pygame.K_LEFT] and man.x > man.vel:
