@@ -58,6 +58,21 @@ class Player(object):
         self.hitbox = (self.x + 17, self.y + 11, 29, 52)
         # pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
 
+    def hit(self):
+        self.x = 60
+        self.walk_count = 0
+        font1 = pygame.font.SysFont('comicsans',100)
+        text = font1.render('-5', 1, (255, 0, 0))
+        win.blit(text, (250 - (text.get_width()/2), 200))
+        pygame.display.update()
+        i = 0
+        while i < 300:
+            pygame.time.delay(10)
+            i += 1
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    i = 301
+                    pygame.quit()
 
 class Projectile(object):
     def __init__(self, x, y, radius, color, facing, player):
@@ -163,6 +178,11 @@ run = True
 shoot_loop = 0
 while run:
     clock.tick(27)
+
+    if man.hitbox[1] < goblin.hitbox[1] + goblin.hitbox[3] and man.hitbox[1] + man.hitbox[3] > goblin.hitbox[1]:
+        if man.hitbox[0] + man.hitbox[2] > goblin.hitbox[0] and man.hitbox[0] < goblin.hitbox[0] + goblin.hitbox[2]:
+            man.hit()
+            man.score -= 5
 
     if shoot_loop > 0:
         shoot_loop += 1
