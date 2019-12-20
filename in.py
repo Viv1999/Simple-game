@@ -9,6 +9,12 @@ pygame.display.set_caption('My First game')
 
 clock = pygame.time.Clock()
 
+bullet_sound = pygame.mixer.Sound('bullet.wav')
+hit_sound = pygame.mixer.Sound('hit.wav')
+
+music = pygame.mixer.music.load('music.mp3')
+pygame.mixer.music.play(-1)
+
 
 class Player(object):
 
@@ -125,6 +131,7 @@ class Enemy(object):
 
     def hit(self, player):
         print('hit')
+        hit_sound.play()
         player.score += 1
         if self.health > 0:
             self.health -= 1
@@ -180,6 +187,7 @@ while run:
     keys = pygame.key.get_pressed()
 
     if keys[pygame.K_SPACE] and shoot_loop == 0:
+        bullet_sound.play()
         if man.left:
             facing = -1
         else:
