@@ -50,7 +50,7 @@ class Player(object):
                 win.blit(walkLeft[0], (self.x, self.y))
             self.walk_count = 0
         self.hitbox = (self.x + 17, self.y + 11, 29, 52)
-        pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
+        # pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
 
 
 class Projectile(object):
@@ -88,20 +88,26 @@ class Enemy(object):
         self.walk_count = 0
         self.vel = 3
         self.hitbox = (self.x + 17, self.y + 2, 31, 57)
+        self.health = 10
+        self.visible = True
 
     def draw(self, win):
         self.move()
-        if self.walk_count + 1 >= 33:
-            self.walk_count = 0
+        if self.visible:
+            if self.walk_count + 1 >= 33:
+                self.walk_count = 0
 
-        if self.vel > 0:
-            win.blit(self.walkRight[self.walk_count//3], (self.x, self.y))
-            self.walk_count += 1
-        else:
-            win.blit(self.walkLeft[self.walk_count // 3], (self.x, self.y))
-            self.walk_count += 1
-        self.hitbox = (self.x + 17, self.y + 2, 31, 57)
-        pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
+            if self.vel > 0:
+                win.blit(self.walkRight[self.walk_count//3], (self.x, self.y))
+                self.walk_count += 1
+            else:
+                win.blit(self.walkLeft[self.walk_count // 3], (self.x, self.y))
+                self.walk_count += 1
+
+            pygame.draw.rect(win, (255, 0, 0), (self.hitbox[0], self.hitbox[1] - 20, 50, 10))
+            pygame.draw.rect(win, (255, 0, 0), (self.hitbox[0], self.hitbox[1] - 20, 50, 10))
+            self.hitbox = (self.x + 17, self.y + 2, 31, 57)
+            # pygame.draw.rect(win, (255, 0, 0), self.hitbox, 2)
 
     def move(self):
         if self.vel > 0:
@@ -120,6 +126,10 @@ class Enemy(object):
     def hit(self, player):
         print('hit')
         player.score += 1
+        if self.health > 0:
+            self.health -= 1
+        else:
+            self.visible = False
 
 
 walkRight = [pygame.image.load('R1.png'), pygame.image.load('R2.png'), pygame.image.load('R3.png'), pygame.image.load('R4.png'), pygame.image.load('R5.png'), pygame.image.load('R6.png'), pygame.image.load('R7.png'), pygame.image.load('R8.png'), pygame.image.load('R9.png')]
