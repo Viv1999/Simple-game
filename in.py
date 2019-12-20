@@ -137,8 +137,15 @@ man = Player(300, 410, 64, 64)
 goblin = Enemy(100, 410, 64, 64, 450)
 bullets = []
 run = True
+shoot_loop = 0
 while run:
     clock.tick(27)
+
+    if shoot_loop > 0:
+        shoot_loop += 1
+    if shoot_loop > 3:
+        shoot_loop = 0
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
@@ -156,13 +163,14 @@ while run:
 
     keys = pygame.key.get_pressed()
 
-    if keys[pygame.K_SPACE]:
+    if keys[pygame.K_SPACE] and shoot_loop == 0:
         if man.left:
             facing = -1
         else:
             facing = 1
         if len(bullets) < 5:
             bullets.append(Projectile(man.x + man.width//2, round(man.y + man.height//2), 6, (0, 0, 0), facing))
+        shoot_loop = 1
 
     if keys[pygame.K_LEFT] and man.x > man.vel:
         man.x -= man.vel
