@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7dafd975-b859-4bfc-b15f-bd723d303493" name="Default Changelist" comment="small graphical game, images added, added background">
+    <list default="true" id="7dafd975-b859-4bfc-b15f-bd723d303493" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/in.py" beforeDir="false" afterPath="$PROJECT_DIR$/in.py" afterDir="false" />
     </list>
@@ -101,35 +101,43 @@
       <option name="project" value="LOCAL" />
       <updated>1576831576038</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="code optimized (converted to OOP)">
+      <created>1576833108176</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576833108176</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit, added jumping rectangle" />
     <MESSAGE value="small graphical game, images added, added background" />
-    <option name="LAST_COMMIT_MESSAGE" value="small graphical game, images added, added background" />
+    <MESSAGE value="code optimized (converted to OOP)" />
+    <option name="LAST_COMMIT_MESSAGE" value="code optimized (converted to OOP)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2" timestamp="1576833086881">
+    <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2" timestamp="1576833108000">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1576833086881" />
-    <state width="1343" height="175" key="GridCell.Tab.0.bottom" timestamp="1576833003067">
+    <state x="289" y="27" width="777" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1576833108000" />
+    <state width="611" height="173" key="GridCell.Tab.0.bottom" timestamp="1576835425892">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="175" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1576833003067" />
-    <state width="1343" height="175" key="GridCell.Tab.0.center" timestamp="1576833003064">
+    <state width="611" height="173" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1576835425892" />
+    <state width="611" height="173" key="GridCell.Tab.0.center" timestamp="1576835425892">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="175" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1576833003064" />
-    <state width="1343" height="175" key="GridCell.Tab.0.left" timestamp="1576833003062">
+    <state width="611" height="173" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1576835425892" />
+    <state width="611" height="173" key="GridCell.Tab.0.left" timestamp="1576835425891">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="175" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1576833003062" />
-    <state width="1343" height="175" key="GridCell.Tab.0.right" timestamp="1576833003065">
+    <state width="611" height="173" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1576835425891" />
+    <state width="611" height="173" key="GridCell.Tab.0.right" timestamp="1576835425892">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1343" height="175" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1576833003065" />
+    <state width="611" height="173" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1576835425892" />
     <state width="1343" height="219" key="GridCell.Tab.1.bottom" timestamp="1576831458049">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
