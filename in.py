@@ -73,6 +73,27 @@ class Player(object):
                 if event.type == pygame.QUIT:
                     i = 301
                     pygame.quit()
+    def kill(self):
+        self.x = 30
+        self.walk_count = 5
+        font1 = pygame.font.SysFont('comicsans',100)
+        text = font1.render('-5', 1, (255, 0, 0))
+        win.blit(text, (250 - (text.get_width()/2), 200))
+        pygame.display.update()
+        
+        if self.visible:
+            if self.walk_count + 1 >= 33:
+                self.walk_count = 0
+
+            if self.vel > 0:
+                win.blit(self.walkRight[self.walk_count//3], (self.x, self.y))
+                self.walk_count += 1
+            else:
+                win.blit(self.walkLeft[self.walk_count // 3], (self.x, self.y))
+                self.walk_count += 1
+        
+        
+        
 
 class Projectile(object):
     def __init__(self, x, y, radius, color, facing, player):
