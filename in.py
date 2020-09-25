@@ -173,6 +173,22 @@ class Enemy(object):
             self.health -= 1
         else:
             self.visible = False
+            
+    def die(self, player):
+        if self.vel > 0:
+            if self.x + self.vel < self.path[1]:
+                self.x += self.vel
+            else:
+                self.vel *= -1
+                self.walk_count = 0
+        
+        print('die')
+        hit_sound.play()
+        player.score += 1
+        if self.health > 0:
+            self.health -= 1
+        else:
+            self.visible = False
 
 
 walkRight = [pygame.image.load('R1.png'), pygame.image.load('R2.png'), pygame.image.load('R3.png'), pygame.image.load('R4.png'), pygame.image.load('R5.png'), pygame.image.load('R6.png'), pygame.image.load('R7.png'), pygame.image.load('R8.png'), pygame.image.load('R9.png')]
